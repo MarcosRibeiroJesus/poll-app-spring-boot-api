@@ -18,7 +18,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") //TODO inserir origem a partir do PollAppProperty => pollAppProperty.getOriginPermitida()
-                .allowedOrigins("*")
+                .allowedOrigins("https://react-pwa-poll.firebaseapp.com")
                 .allowedMethods("HEAD", "OPTIONS", "GET", "POST", "PUT", "PATCH", "DELETE")
                 .maxAge(MAX_AGE_SECS);
     }
